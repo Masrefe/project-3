@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Project Name
+Version:    1.0
+Last change:    24/03/17 [fixed Float bug, vf]
+Author Name: Author Name
+Primary use:    Project Type
+-------------------------------------------------------------------*/
+
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Body
+2.
+-------------------------------------------------------------------*/
+/*link=
+
+https://gist.github.com/Shiponkormoker/89c66faa975cf13e0506769aefd476c5
+
+/*
+==========================================
+    Reset Css
+==========================================
+*/
+/*BASIC CSS*/
+.alignleft{
+  float: left;
+  margin-right: 15px;
+}
+.alignright{
+  float: right;
+  margin-left: 15px;
+}
+.aligncenter{
+  display:block;
+  margin:0 auto;
+}
+a:focus{
+  outline: 0 solid;
+}
+img{
+  max-width:100px;
+  height: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin:0 0 15px;
+  font-width:300;
+}
+a:hover{
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  margin:0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
+
+}
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="url"],
+input[type="search"],
+input[type="email"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+    outline: none;
+}
+html, body {
+  height: 100%;
+}
+
+
+
+.logo p {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main-menu li a {
+  color: #333;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px;
+  color: #fff;
+  border: 1px solid #fff;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: .3s;
+}
+.main-menu li {
+  display: inline-block;
+  padding: 20px 0;
+}
+.logo {
+  padding: 4px 0;
+}
+.header-area {
+  padding: 20px 0;
+}
+.logo p span {
+  color: #4BCAFF;
+}
+.main-menu li a:hover {
+  color: #4BCAFF;
+  border-color: #4BCAFF;
+}
+.hero-area{
+  background-image: url(../img/hero-bg.jpg);
+}
+.hero-area {
+  background-size: cover;
+  background-position: center;
+  background-color: #333;
+  color: #fff;
+}
+
+.header-wrapper {
+  height: 100%;
+  width: 100%;
+}
+.hero-area {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.hero-title-table {
+  display: table-cell;
+  vertical-align: middle;
+}
+.header-area.header-absulate {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  color: #fff;
+}
+.hero-title h1 {
+  font-size: 41px;
+}
+.services-area {
+  background: #4BCAFF;
+  padding: 80px 0;
+  color: #fff;
+  }
+.services-title h3 {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+
+.services-title {
+  margin-bottom: 40px;
+}
+.services-icon {
+  font-size: 50px;
+}
+.single-services h3 {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.portfolio-title h3{
+  font-size: 30px;
+  text-transform: uppercase;
+}
+.project-bg-1{background-image: url(../img/b-1.jpg);}
+.project-bg-2{background-image: url(../img/b-2.jpg);}
+.project-bg-3{background-image: url(../img/b-3.jpg);}
+.project-bg-4{background-image: url(../img/b-4.jpg);}
+.project-bg-5{background-image: url(../img/b-5.jpg);}
+.project-bg-6{background-image: url(../img/m-1.jpg);}
+.project-bg-7{background-image: url(../img/m-2.jpg);}
+.project-bg-8{background-image: url(../img/m-3.jpg);}
+.project-bg-9{background-image: url(../img/m-4.jpg);}
+
+
+
+.single-project {
+  background-color: #333;
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  display: table;
+  width: 100%;
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+.project-hover {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  position: relative;
+  z-index: 7;
+  padding: 30px;
+  transform: scale(.5);
+  transition: .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+.project-hover:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  content: "";
+  z-index: -1;
+  opacity: .5;
+}
+
+.single-project:hover .project-hover {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+    
+}
+.portfolio-area {
+  padding: 50px 0;
+}
+.project-filter li.active {
+  color: #4bcaff;
+  border: 1px solid #4bcaff;
+}
+.protfolio-row{
+  margin-bottom: 50px;
+}
+.project-filter li {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 10px;
+  color: #515f67;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.project-hover i.fa {
+  color: #4BCAFF;
+  font-size: 30px;
+}
+/*for isotope-transition*/
+.isotope,
+.isotope .isotope-item {
+  /* change duration value to whatever you like */
+
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    transition-duration: 1s;
+}
+
+.isotope {
+    -webkit-transition-property: height, width;
+    -moz-transition-property: height, width;
+    transition-property: height, width;
+}
+.isotope .isotope-item {
+    -webkit-transition-property: -webkit-transform, opacity;
+    -moz-transition-property: -moz-transform, opacity;
+    transition-property: transform, opacity;
+}
+
+.video-area {
+  background: #515F67;
+  padding: 60px 0;
+  color: #fff;
+}
+.video-content h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  padding-bottom: 8px;
+  position: relative;
+}
+.box-btn {
+  color: #fff;
+  background: #4BCAFF;
+  padding: 10px 20px;
+  display: inline-block;
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-weight: 500;
+  transition: .3s;
+}
+.box-btn:hover {
+  color: #353f46;
+}
+
+.twitter-area {
+  background: #4BCAFF;
+  padding: 60px 0;
+  color: #fff;
+}
+.twitter-title {
+  position: relative;
+}
+.twitter-title h3 {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  padding-bottom: 8px;
+}
+.twitter-icon {
+  position: absolute;
+  right: 10px;
+  top: -5px;
+  font-size: 30px;
+}
+.twitter-title p {
+  font-size: 28px;
+}
+.twitter-title p span {
+  font-size: 40px;
+}
+
+.about-athour-area{
+  background-image: url(../img/athour-bg.jpg);
+}
+
+.about-athour-area {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  padding: 60px 0;
+  color: #fff;
+  background-attachment: fixed;
+}
+.about-left-content h3 {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+}
+.right-content {
+}
+.social-link a {
+  color: #fff;
+  border: 1px solid;
+  font-size: 15px;
+  display: inline-block;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.social-link {
+  margin-top: 25px;
+}
+
+
+.textimonial-area {
+  padding: 60px 0;
+  color: #515f67;
+}
+.testimonial-title h3 {
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  padding-bottom: 8px;
+}
+.testimonial-title p {
+  position: relative;
+  font-size: 25px;
+  line-height: 42px;
+}
+.testimonial-title p:before {
+  content: "\f10e";
+  font-family: fontawesome;
+  right: 15px;
+  top: -42px;
+  position: absolute;
+  font-size: 20px;
+}
+
+.color-content {
+  color: #4bcaff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.contact-area{
+  background-image: url(../img/contact-bg.jpg);
+}
+
+.contact-area {
+  background-size: cover;
+  background-position: center;
+  background-color: #ddd;
+  background-attachment: fixed;
+  padding: 60px 0;
+  color: #fff;
+}
+.contact-title h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 8px;
+}
+.contact-form h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+input {
+}
+.contact-form input {
+  margin-bottom: 20px;
+  border: 1px solid #fff;
+  background: transparent;
+  width: 80%;
+  padding: 10px;
+}
+.contact-form textarea {
+  background: transparent;
+  resize: none;
+  border: 1px solid #fff;
+  width: 80%;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.contact-form input[type=submit] {
+  width: 60%;
+  background: #4bcaff;
+  border: none;
+  text-transform: uppercase;
+  padding: 12px;
+}
+.contact-info {
+  margin-top: 40px;
+}
+
+.footer-area {
+  background: #353f47;
+  color: #515f67;
+}
+.footer-menu li {
+  display: inline-block;
+  padding: 20px 0;
+}
+.footer-menu li a {
+  display: block;
+  color: #515f67;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-right: 1px solid #515f67;
+  margin-right: 10px;
+  padding-right: 15px;
+}
+
+.footer-menu li:last-child a {
+  border-right: none;
+}
+
+.footer-right {
+  padding: 21px 0;
+}
+
+.video-content h3:after, .twitter-title h3:after, .about-left-content h3:after, .contact-title h3:after, .services-title h3:after{
+   position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background: #fff;
+  width: 80px;
+  height: 2px;
+}
+.portfolio-title h3:after, .testimonial-title h3:after{
+  position: absolute;
+  left: 14px;
+  bottom: 0;
+  content: "";
+  background: #515f67;
+  width: 80px;
+  height: 2px;
+}
+.testimonial-title h3:after{
+  left: 0;
+}
+#simple-menu{display: none;}

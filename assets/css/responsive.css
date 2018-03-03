@@ -1,0 +1,94 @@
+/*******************************
+	All Responsive Code
+*******************************/
+/* Medium layout: 1200px, */
+
+@media only screen and (min-width:992px) and (max-width: 1200px) {
+.project-filter li {
+	margin-left: 8px;
+}
+#simple-menu{display: none;}
+}
+/* Tablet layout: 768px, */
+@media only screen and (min-width:768px) and (max-width: 991px) {
+.logo, .main-menu {
+  text-align: center;
+}
+.video-content {
+	margin-bottom: 30px;
+}
+.twitter-title p span {
+	font-size: 28px;
+}
+.twitter-title p  {
+	font-size: 20px;
+}
+#simple-menu{display: none;}
+}
+.footer-menu li a {
+	margin-right: 4px;
+	padding-right: 10px;
+}
+/* Mobile layout: 320px, */
+@media only screen and (max-width:767px)  {
+.project-filter li {
+	padding: 5px;
+	margin-left: 5px;
+}
+.project-filter, .logo, .portfolio-title h3, .footer-right, .footer-menu{
+	text-align: center;
+}
+.portfolio-title h3:after{
+	display: none;
+}
+
+.social-link a {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	margin-right:4px;
+}
+.hero-title h1 {
+  font-size: 25px;
+}
+.header-area.header-absulate {
+  position: relative;
+  background: #515F67;
+}
+.hero-title {
+  padding: 50px 0;
+}
+.services-area {
+  padding: 40px 0;
+}
+.video-content {
+  margin-bottom: 30px;
+}
+.twitter-title p {
+  font-size: 14px;
+}
+.twitter-title p span {
+  font-size: 16px;
+}
+.twitter-title h3, .services-icon h3, .portfolio-title h3, .video-content h3, .about-left-content h3, .testimonial-title h3, .contact-title h3 {
+  font-size: 20px;
+}
+.footer-menu li a {
+	font-size: 10px;
+	margin-right: 5px;
+}
+#simple-menu{display:block;}
+.main-menu{display: none;}
+#simple-menu {
+	font-size: 30px;
+	position: absolute;
+	left: 12px;
+	top: 3px;
+	color: #fff;
+}
+}
+
+/* wide mobile layout: 480px, */
+@media only screen and (min-width:480px) and (max-width: 767px) {
+
+}
