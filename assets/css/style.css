@@ -103,6 +103,7 @@ html, body {
   border: 1px solid #fff;
   margin-left: 10px;
   font-weight: 600;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .main-menu li {
@@ -213,9 +214,12 @@ html, body {
   position: relative;
   z-index: 7;
   padding: 30px;
-  transform: scale(.5);
+  -webkit-transform: scale(.5);
+          transform: scale(.5);
+  -webkit-transition: .5s;
   transition: .5s;
   opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   visibility: hidden;
 }
 .project-hover:after {
@@ -228,12 +232,15 @@ html, body {
   content: "";
   z-index: -1;
   opacity: .5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
 
 .single-project:hover .project-hover {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   visibility: visible;
   opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
     
 }
 .portfolio-area {
@@ -264,19 +271,19 @@ html, body {
   /* change duration value to whatever you like */
 
     -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
     transition-duration: 1s;
 }
 
 .isotope {
     -webkit-transition-property: height, width;
-    -moz-transition-property: height, width;
     transition-property: height, width;
 }
 .isotope .isotope-item {
     -webkit-transition-property: -webkit-transform, opacity;
-    -moz-transition-property: -moz-transform, opacity;
+    -webkit-transition-property: opacity, -webkit-transform;
+    transition-property: opacity, -webkit-transform;
     transition-property: transform, opacity;
+    transition-property: transform, opacity, -webkit-transform;
 }
 
 .video-area {
@@ -299,6 +306,7 @@ html, body {
   text-transform: uppercase;
   margin-top: 20px;
   font-weight: 500;
+  -webkit-transition: .3s;
   transition: .3s;
 }
 .box-btn:hover {
